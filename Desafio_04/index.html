@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculadora">
+        <input type="text" id="display" disabled>
+        <div class="botoes">
+            <!-- Crie uma calculadora (utilize o layout passado na aula 3), mas acrescente botões para: calcular um número elevado a qualquer potência, arredondar um número e calcular a raiz quadrada de um número. Utilize o objeto Math para os botões adicionais. O usuário poderá criar uma expressão como 3 + 3 * 5 / 2, ao clicar no botão =, chame uma função calcule e mostre o resultado da expressão. Para os botões adicionais, ao clicar em cada um, pode ser solicitado através de um caixa de prompt os valores necessários para os cálculos. calcular um número elevado a qualquer potência (Math.pow(x,y)) arredondar um número (Math.round(X)) calcular a raiz quadrada de um número (Math.sqrt(x)) -->
+            <button class="botao, m" onclick="memoriaRecall()">MRC</button>
+            <button class="botao, m" onclick="memoriaSubtrair()">M-</button>
+            <button class="botao, m" onclick="memoriaAdicionar()">M+</button>
+            <button class="botao, operador" onclick="adicionarOperador('/')">÷</button>
+            <button class="botao" onclick="adicionarNumero('7')">7</button>
+            <button class="botao" onclick="adicionarNumero('8')">8</button>
+            <button class="botao" onclick="adicionarNumero('9')">9</button>
+            <button class="botao, operador" onclick="adicionarOperador('*')">x</button>
+            <button class="botao" onclick="adicionarNumero('4')">4</button>
+            <button class="botao" onclick="adicionarNumero('5')">5</button>
+            <button class="botao" onclick="adicionarNumero('6')">6</button>
+            <button class="botao, operador" onclick="adicionarOperador('-')">-</button>
+            <button class="botao" onclick="adicionarNumero('1')">1</button>
+            <button class="botao" onclick="adicionarNumero('2')">2</button>
+            <button class="botao" onclick="adicionarNumero('3')">3</button>
+            <button class="botao, operador" onclick="adicionarOperador('+')">+</button>
+            <button class="botao" onclick="adicionarNumero('0')">0</button>
+            <button class="botao" onclick="adicionarPonto()">.</button>
+            <button class="botao" onclick="limpar()">C</button>
+            <button class="botao, igual" onclick="calcular()">=</button>
+            <button class="botao" onclick="calcularPotencia()">n^x</button>
+            <button class="botao" onclick="arredondar()">Ard</button>
+            <button class="botao" onclick="raizQuadrada()">√x</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

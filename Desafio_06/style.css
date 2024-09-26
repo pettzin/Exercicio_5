@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFECD1;
+    text-align: center;
+    margin: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #3C4540;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #3C4540;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #2E3030;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #3C4540;
+}
+
+th {
+    background-color: #BFCD96;
+}
+
+.aprovado {
+    background-color: #a0e6a0;
+}
+
+.reprovado {
+    background-color: #f1a7a7;
+}
+
+.avaliacao-final {
+    background-color: #f3e67e;
+}

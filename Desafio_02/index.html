@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Personalizada</title>
+    <style>
+        body {
+            background-color: #CCCCCC;
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 40%;
+            margin: 20px auto;
+            border-collapse: separate; 
+            border-spacing: 10px; 
+        }
+        td {
+            padding: 20px;
+            text-align: center;
+            color: black; 
+        }
+        .par {
+            background-color: green; 
+        }
+        .impar {
+            background-color: yellow; 
+        }
+    </style>
+</head>
+<body>
+    <!-- Fazer uma página HTML que solicite ao usuário a quantidade de colunas e a quantidade de linhas de uma tabela, para isso utilize o prompt. Após a leitura dos dados, o programa deve gerar uma tabela com o número especificado de linhas e colunas. 
+    Especificações da tabela:
+    - a tabela não deve ter borda;
+    - as células de colunas pares devem ter cor de fundo verde e as células de colunas ímpares devem ter cor de fundo amarela;
+    - dentro de cada célula devem aparecer as coordenadas da célula em cor preta. -->
+
+    <h1 style="text-align: center;">Gerador de Tabela</h1>
+
+    <script>
+        const colunas = parseInt(prompt("Digite a quantidade de colunas:"));
+        const linhas = parseInt(prompt("Digite a quantidade de linhas:"));
+
+        const tabela = document.createElement("table");
+        for (let i = 0; i < linhas; i++) {
+            const novaLinha = document.createElement("tr");
+            for (let j = 0; j < colunas; j++) {
+                const novaCelula = document.createElement("td");
+                
+                if (j % 2 === 0) {
+                    novaCelula.className = "par"; 
+                } else {
+                    novaCelula.className = "impar"; 
+                }
+                
+                novaCelula.textContent = `(${i + 1}, ${j + 1})`;
+                
+                novaLinha.appendChild(novaCelula);
+            }
+            tabela.appendChild(novaLinha);
+        }
+
+        document.body.appendChild(tabela);
+    </script>
+
+</body>
+</html>
+

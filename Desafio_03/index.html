@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Texto</title>
+    <style>
+        body {
+            background-color: #CCCCCC;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .resultado {
+            width:30%;
+            margin-top: 20px;
+            margin-left: 435px;
+            padding: 10px;
+            background-color: #FFF;
+            border: 1px solid #000;
+            white-space: pre-wrap; 
+        }
+    </style>
+</head>
+<body>
+    <!-- Crie um formulário com um campo de texto e dois botões (um com o rótulo "Maiúscula" e o outro com o rótulo "Separar"). Ao clicar no 1º botão a palavra ou frase digitada no campo deve ser mostrada toda em letra maiúscula em uma div logo abaixo do formulário. Ao clicar no 2º botão as palavras digitadas no campo devem ser divididas considerando-se o espaço e apresentadas uma em cada linha em uma div logo abaixo do formulário. Para atribuir o conteúdo a uma div, utilize a propriedade innerHTML, ex: document.querySelector(“#id_div").innerHTML=conteudo; -->
+    <h1>Formulário de Texto</h1>
+    <input type="text" id="campoTexto" placeholder="Digite uma palavra ou frase" />
+    <button type="button" id="btnMaiuscula">Maiúscula</button>
+    <button type="button" id="btnSeparar">Separar</button>
+
+    <div class="resultado" id="resultado"></div>
+
+    <script>
+        document.getElementById("btnMaiuscula").addEventListener("click", function() {
+            const texto = document.getElementById("campoTexto").value;
+            document.getElementById("resultado").innerHTML = texto.toUpperCase();
+        });
+
+        document.getElementById("btnSeparar").addEventListener("click", function() {
+            const texto = document.getElementById("campoTexto").value;
+            const palavras = texto.split(" ");
+            let resultadoSeparado = "";
+            palavras.forEach(function(palavra) {
+                if (palavra.trim() !== "") {
+                    resultadoSeparado += palavra + "<br>";
+                }
+            });
+            document.getElementById("resultado").innerHTML = resultadoSeparado; 
+        });
+    </script>
+</body>
+</html>

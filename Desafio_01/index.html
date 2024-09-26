@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Nomes</title>
+    <style>
+        body {
+            background-color: #CCCCCC;
+            color: #CCCCCC;
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 50%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #CCCCCC;
+        }
+        th {
+            font-size: 15px;
+            font-weight: 700;
+            background-color: #000033;
+            color: #CCCCCC;
+            padding: 10px;
+        }
+        td {
+            font-size: 14px;
+            background-color: #000066;
+            color: #CCCCCC;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!--Fazer uma página na qual o usuário entre com vários nomes, quantos ele desejar e um de cada vez. Montar uma tabela onde cada um dos nomes digitados pelo usuário deve estar em uma linha da tabela juntamente com um índice. O índice deve iniciar em um e incrementar de um em um. Para entrar com os parâmetros use a janela de prompt do navegador. Para interromper as entradas basta acionar o botão "cancel", com isso a janela de prompt irá retornar null. Formate as células de título da tabela usando os seguintes atributos: tamanho-da-fonte:15px, peso-da-fonte:700 e cor-de-fundo:#000033.Formate as demais células da tabela usando os seguintes atributos: tamanho-da-fonte:14px e cor-de-fundo:#000066. Todo o texto da tabela deve ter cor #CCCCCC e a tabela deve ter o atributo cor-de-fundo setado em #CCCCCC.-->
+
+<h1 style="text-align: center; color: #000033;">Entrada de Nomes</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Índice</th>
+            <th>Nome</th>
+        </tr>
+    </thead>
+    <tbody id="tabelaNomes">
+        
+    </tbody>
+</table>
+
+<script>
+    let indice = 1;
+    let nome;
+    
+    while (true) {
+        nome = prompt("Digite um nome (ou cancele para terminar):");
+        if (nome === null) break; 
+        
+        
+        const tabela = document.getElementById("tabelaNomes");
+        const novaLinha = document.createElement("tr");
+        
+        
+        const celulaIndice = document.createElement("td");
+        celulaIndice.textContent = indice++;
+        
+        const celulaNome = document.createElement("td");
+        celulaNome.textContent = nome;
+        
+        
+        novaLinha.appendChild(celulaIndice);
+        novaLinha.appendChild(celulaNome);
+        
+        
+        tabela.appendChild(novaLinha);
+    }
+</script>
+
+</body>
+</html>

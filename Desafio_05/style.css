@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #FFECD1;
+    margin: 20px;
+}
+
+.abas {
+    margin-bottom: 20px;
+}
+
+.aba {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #3C4540;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.aba:hover {
+    background-color: #2E3030;
+}
+
+.conteudo {
+    padding: 20px;
+    border: 1px solid #3C4540;
+    border-radius: 5px;
+    background-color: #BFCD96;
+}
+
+#tempo {
+    font-size: 48px;
+    margin: 20px 0;
+}

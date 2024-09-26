@@ -1,0 +1,115 @@
+body {
+  background-color: #FFECD1;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.calculadora {
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px black;
+  width: 250px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #3C4540;
+  border: 1px solid #3C4540;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#display {
+  border: 1px solid black;
+  box-shadow: inset 1px 1px 1px 5px black;
+  width: 90%;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 24px;
+  text-align: right;
+  border: none;
+  border-radius: 10px;
+  background-color: #BFCD96;
+}
+
+.botoes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.operador {
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px black;
+  color: white;
+  background-color: #f42040;
+  border-radius: 10px;
+  height: 40px;
+  width: 50px;
+}
+
+.igual {
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px black;
+  color: white;
+  background-color: #FEA805;
+  border-radius: 10px;
+  height: 90px; 
+  grid-row: span 2; 
+  width: 50px; 
+}
+
+.m {
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px black;
+  color: white;
+  background-color: #706C6D;
+  border-radius: 10px;
+  height: 40px;
+  width: 50px;
+}
+
+.botao {
+  width: 50px;
+  height: 40px;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px black;
+  border-radius: 10px;
+  background-color: #2E3030;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.botao:hover {
+  background-color: #4f4f4f;
+}
+
+.botao:active {
+  background-color: #9e9e9e;
+}
+
+.m:hover {
+  background-color: #939393;
+}
+
+.m:active {
+  background-color: #9e9e9e;
+}
+
+.igual:hover {
+  background-color: #ffc65d;
+}
+
+.igual:active {
+  background-color: #ffd689;
+}
+
+.operador:hover {
+  background-color: #FA445F;
+}
+
+.operador:active {
+  background-color: #ff6f6f;
+}

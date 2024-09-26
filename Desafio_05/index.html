@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página com Abas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Criar uma página com três abas (conforme imagem abaixo), que quando clicadas devem apresentar os conteúdos demonstrados a seguir: A primeira aba deverá conter um cronômetro que atualize de 1 em 1 segundo.
+    A segunda aba deverá conter um slide show que permita navegar entre 5 imagens clicando em "Anterior" e "Próximo".
+    A terceira aba deverá conter uma caixa de texto para receber um número e um
+    botão que ao ser clicado apresenta abaixo deles o calculo da tabuada do valor
+    informado.-->
+    <div class="abas">
+        <button class="aba" onclick="abrirAba(event, 'cronometro')">Cronômetro</button>
+        <button class="aba" onclick="abrirAba(event, 'slideshow')">Slideshow</button>
+        <button class="aba" onclick="abrirAba(event, 'tabuada')">Tabuada</button>
+    </div>
+
+    <div id="cronometro" class="conteudo">
+        <h2>Cronômetro</h2>
+        <div id="tempo">00:00</div>
+    </div>
+
+    <div id="slideshow" class="conteudo" style="display:none;">
+        <h2>Slideshow</h2>
+        <img id="imagem" src="image.jpg" alt="Slideshow" width="300">
+        <div>
+            <button onclick="trocarImagem(-1)">Anterior</button>
+            <button onclick="trocarImagem(1)">Próximo</button>
+        </div>
+    </div>
+
+    <div id="tabuada" class="conteudo" style="display:none;">
+        <h2>Tabuada</h2>
+        <input type="number" id="numero" placeholder="Digite um número">
+        <button onclick="mostrarTabuada()">Calcular Tabuada</button>
+        <div id="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

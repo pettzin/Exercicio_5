@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Alunos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Usando JS+HTML+CSS, faça um formulário com os seguintes campos e funcionalidades
+    descritas no próximo slide:
+        Nome
+        Rgm
+        Nota parcial (máximo 2 pontos)
+        Nota exercícios (máximo 1 ponto)
+        Nota projeto (máximo 2 pontos)
+        Nota regimental (máximo 5 pontos)
+        Botão para cadastrar
+        Botão exibir dados
+        Ao clicar no botão Cadastrar:
+        Estando todos os campos preenchidos, grave os dados em vetores para cada informação do aluno, ou seja, um vetor para rgms, um para nomes, um para notas_p, um para notas_exer, um para notas_proj e um para notas_reg.
+        Ao gravar os dados, limpe os campos do formulário.
+        Ao clicar no botão Mostrar:
+        exiba todos os dados dos vetores em uma tabela, um registro de aluno por linha
+        para cada aluno acrescente uma coluna com o cálculo da nota final, para isso faça uma função que
+        receba as notas como parâmetros e retorne a soma das 4 notas.
+        Adicione outra coluna com o conceito (Aprovado, Reprovado ou Avaliação Final) conforme os critérios da
+        Universidade, você deverá chamar uma função que retorne o conceito do aluno conforme sua nota final.
+        Formate o valor da média final e do conceito com CSS.-->
+    <h1>Cadastro de Alunos</h1>
+    <form id="formulario">
+        <input type="text" id="nome" placeholder="Nome" required>
+        <input type="text" id="rgm" placeholder="RGM" required>
+        <input type="number" id="notaParcial" placeholder="Nota Parcial (máx 2)" max="2" min="0" step="0.1" required>
+        <input type="number" id="notaExercicios" placeholder="Nota Exercícios (máx 1)" max="1" min="0" step="0.1" required>
+        <input type="number" id="notaProjeto" placeholder="Nota Projeto (máx 2)" max="2" min="0" step="0.1" required>
+        <input type="number" id="notaRegimental" placeholder="Nota Regimental (máx 5)" max="5" min="0" step="0.1" required>
+        <button type="button" id="cadastrar">Cadastrar</button>
+        <button type="button" id="mostrar">Mostrar Dados</button>
+    </form>
+    
+    <div id="tabelaContainer" style="display:none;">
+        <h2>Dados Cadastrados</h2>
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>RGM</th>
+                    <th>Nota Final</th>
+                    <th>Conceito</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaCorpo"></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
